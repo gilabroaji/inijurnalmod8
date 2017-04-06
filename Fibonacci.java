@@ -30,5 +30,23 @@ public class Fibonacci {
             System.out.print(fib[i] +  " ");
         }
     }
-    
+     int sum=0;
+// Initialize some variables
+    int current, prev = 1, prevprev = 0;
+// Loop exactly 10 times 
+    for(int i = 0; i < 10; i++)          
+    {
+// Next number is sum of previous two 
+      current = prev + prevprev;        
+      System.out.println(current + " ");// Print it out
+       sum+=current;
+// First previous becomes 2nd previous 
+      prevprev = prev;
+// And current number becomes previous                  
+      prev = current;                   
+    }
+// Terminate the line, and flush output 
+    System.out.println();               
+    System.out.print("Result= " + sum);
+  }
 }
